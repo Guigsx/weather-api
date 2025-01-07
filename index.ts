@@ -8,7 +8,7 @@ app.get('/', (req: any, res: any) => {
     res.json({ message: 'Bem-vindo á weather-api' })
 })
 
-app.get('/clima/:city/:state', (req: any, res: any) => {
+app.get('/clima/:city/:state?', (req: any, res: any) => {
     const city: string = req.params.city
     const state: string = req.params.state || ''
 

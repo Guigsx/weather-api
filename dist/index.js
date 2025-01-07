@@ -10,7 +10,7 @@ const port = 5000;
 app.get('/', (req, res) => {
     res.json({ message: 'Bem-vindo á weather-api' });
 });
-app.get('/clima/:city/:state', (req, res) => {
+app.get('/clima/:city/:state?', (req, res) => {
     const city = req.params.city;
     const state = req.params.state || '';
     weather_js_1.default.find({ search: `${city}, ${state}`, degreeType: 'C' }, (err, result) => {

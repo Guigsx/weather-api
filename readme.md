@@ -2,7 +2,8 @@
 
 Esta API fornece dados detalhados de previsão do tempo para diferentes localizações, incluindo informações atuais e previsões para os próximos dias. Os dados estão estruturados em formato JSON e incluem informações como temperatura, condições climáticas, umidade, velocidade do vento, entre outros.
 
-É um array contendo objetos, cada um representando uma localização específica. Cada objeto possui duas seções principais:
+## Exemplo de uso:
+```https://weather-api-ldjg.onrender.com/clima/cidade/estado```
 
 ## Propriedade Principal: data
 1. `location`: Informações sobre a localização.
@@ -12,6 +13,7 @@ Esta API fornece dados detalhados de previsão do tempo para diferentes localiza
 Detalhes das propiedades.
 
 1. `location`
+
 Contém informações geográficas e contextuais da localização:
 - `name`: Nome da localização.
 - `lat`: Latitude.
@@ -22,6 +24,7 @@ Contém informações geográficas e contextuais da localização:
 - `imagerelativeurl`: URL base para imagens meteorológicas.
 
 2. `current`
+
 Informações do clima no momento da consulta:
 
 - `temperature`: Temperatura atual.
@@ -37,7 +40,8 @@ Informações do clima no momento da consulta:
 - `shortday`: Abreviação do nome do dia.
 - `imageUrl`: URL para uma imagem representando o clima atual.
 
-3. forecast
+3. `forecast`
+
 Informações sobre as previsões diárias:
 
 - `low`: Temperatura mínima esperada para o dia.
@@ -50,7 +54,7 @@ Informações sobre as previsões diárias:
 - `precip`: Probabilidade de precipitação (chuva) para o dia, geralmente em porcentagem.
 
 ### Exemplo
-```
+```json
 {
     "location": {
         "name": "Juazeiro, Brazil",
